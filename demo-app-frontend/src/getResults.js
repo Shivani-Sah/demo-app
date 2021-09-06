@@ -22,7 +22,7 @@ const GetResults = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [activeClassName, setActiveClassName] = useState("");
     useEffect(()=>{
-        fetch('http://localhost:8080/get').then(response => {
+        fetch('http://localhost:8080/get',{mode:'cors'}).then(response => {
             return response.json();
         }).then(data => {
             setLoading(false);
